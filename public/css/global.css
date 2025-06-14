@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e70b3;
+  color: #333;
+  text-align: center;
+  /* corregido */
+  padding: 2rem;
+  /* agregado para más espacio */
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  /* espacio debajo del título */
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ecf0f1;
+  /* color de fondo para los enlaces */
+  border-radius: 5px;
+  /* bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* animación suave */
+}
+
+a:hover {
+  background-color: #3498db;
+  color: #fff;
+  /* cambia el color de texto al pasar el mouse */
+  text-decoration: none;
+  /* manténlo sin subrayado */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 300px;
+  margin: 2rem auto;
+  /* centra la lista */
+}
+
+ul li {
+  margin: 1rem 0;
+}
+
+p {
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn {
+  background-color: #006bb2;
+  /* color de fondo */
+  color: white;
+  /* color del texto */
+  padding: 12px 24px;
+  /* espacio interno (vertical horizontal) */
+  border: none;
+  /* sin borde */
+  border-radius: 8px;
+  /* esquinas redondeadas */
+  font-size: 16px;
+  /* tamaño de texto */
+  cursor: pointer;
+  /* cursor de mano al pasar el mouse */
+  transition: background-color 0.3s, transform 0.2s;
+  /* transición suave */
+  margin: 10px;
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+  background-color: #2980b9;
+  /* color más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  /* hace el botón un poco más grande */
+}
+
+/* Efecto al hacer clic */
+.btn:active {
+  background-color: #2998d9;
+  /* color aún más oscuro al hacer clic */
+  transform: scale(0.95);
+  /* hace el botón un poco más pequeño */
+}
+
+/* Estilo para el input tipo texto */
+input {
+  padding: 8px 12px;
+  /* Espacio interno vertical y horizontal */
+  border: 2px solid #3498db;
+  /* Borde sólido de 2px con color azul */
+  border-radius: 6px;
+  /* Esquinas redondeadas de 6px */
+  outline: none;
+  /* Quita el contorno predeterminado */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  /* Transiciones suaves */
+  width: 90%;
+}
+
+/* Estilo cuando el input está enfocado (activo) */
+input:focus {
+  border-color: #2980b9;
+  /* Color de borde más oscuro al enfocar */
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+  /* Sombra azul suave */
+}
+.login-container{
+  text-align: center;
+  width: 400px;
+  margin:0 auto;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.comentario{
+  text-align: center;
+  width: 300px;
+  margin:10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  color: #0293b8;
+}

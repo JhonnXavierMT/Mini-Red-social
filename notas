@@ -1,0 +1,8 @@
+//instalamos  npm install ejs
+//creamos carpeta view
+//llamamos en nuestra app.js
+
+//-----------------plantilla----------------
+//app.set("view engine","ejs");
+//app.set("view",path.join(__dirname,"view"));
+//-----------------------------------------

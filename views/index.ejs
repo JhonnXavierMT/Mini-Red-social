@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini SNS - Home</title>
+  <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+  <h1 id="title">Welcome to Mini SNS</h1>
+
+  <p>Welcome to your first social media playground — created by you!</p>
+  <p>pagina web de Jhonn X.M.T.</p>
+  <% if(!username){ %>
+  <div class="login-container">
+    <h1>LOGIN</h1>
+    <form method="POST" action="/login">
+      <label for="username">username:</label><br />
+      <input class="caja" type="text" name="username" placeholder="Enter username" required />
+      <label for="password">password:</label><br />
+
+      <input class="caja" type="password" name="password" placeholder="Enter password" required />
+
+      <button class="btn" type="submit">Login</button>
+    </form>
+  </div>
+  <% }else{ %>
+  <h2 id="subtitle">Hello <%- username %></h2>
+  <h2 id="subtitle">Go to:</h2>
+  <ul>
+    <li><a href="/write">✍️ Write a Post</a></li>
+    <li><a href="/posts">📋 View Posts</a></li>
+    <li><a href="menajoDeIndicadores.html">🧑‍💻 Tareas javascript</a></li>
+    <li><a href="/logout">🏃🚪 log out</a></li>
+  </ul>
+  <% } %>
+
+  <script>
+    let edad = 20;
+
+    if (edad >= 18) {
+      console.log("Eres mayor de edad");
+    } else {
+      console.log("Eres menor de edad");
+    }
+
+    for (let i = 1; i <= 5; i++) {
+      console.log("Número: " + i);
+    }
+    let dia = "lunes";
+
+    switch (dia) {
+      case "lunes":
+        console.log("Hoy es lunes");
+        break;
+      case "martes":
+        console.log("Hoy es martes");
+        break;
+      case "miércoles":
+        console.log("Hoy es miércoles");
+        break;
+      default:
+        console.log("No es un día válido");
+    }
+    // agarra el primero que tiene id en el documento html
+    let element = document.getElementById("title");
+    element.style.color = "orange";
+    //agarra el primero que coincida en el documento de class
+    const coment = document.querySelector(".one");
+    coment.style.color = "yellow";
+    // podemos acceder  en forma de lista los elementos de na clase de css mediante el foreach
+    const liz = document.querySelectorAll(".luz");
+    liz.forEach(function(element) {
+      element.style.color = "orange";
+    });
+  </script>
+</body>
+
+</html>

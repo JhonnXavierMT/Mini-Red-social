@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manejo de java script</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+    <h1 id="title">Welcome to Mini SNS</h1>
+
+    <p>Welcome to your first social media playground — created by you!</p>
+
+    <h2 id="subtitle">Go to:</h2>
+    <ul>
+        <li><a href="write.html">✍️ Write a Post</a></li>
+        <li><a href="posts.html">📋 View Posts</a></li>
+    </ul>
+    <hr>
+    <p class="one">First paragraph</p>
+    <p>Second paragraph</p>
+    <p class="one">Third paragraph</p>
+    <hr>
+    <p class="luz">primera de la lista</p>
+    <p>Segunda de la lista</p>
+    <p class="luz">Tercera de la lista</p>
+    <hr>
+    <h3> manejo de elementos hijos</h3>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>opcion</li>
+        <li>correr</li>
+        <li>Contact</li>
+    </ul>
+    <hr>
+    <h1 id="newtitle"></h1>
+    <hr>
+    <input type="text" id="username" value="Alice">
+    <hr>
+    <img id="myImage" src="imagen2.jpg" width="450px">
+    <hr>
+    <img id="images" src="imagen2.jpg" width="450px">
+    <hr>
+    <a id="myLink" href="https://www.google.com">Go to
+        Google</a>
+    <hr>
+    <h1 id="estilos">Hola Chavales</h1>
+    <hr>
+    <style>
+        #message {
+            font-size: 30px;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+    <div style="padding:5px;background: rgb(27, 228, 0);" id="message">BIENVENIDO</div>
+    <hr>
+    <button class="btn" onclick="alert('Button clicked!')">Click Me</button>
+    <hr>
+    <button class="btn" onclick="saludar()">saludar</button>
+    <hr>
+    <input type="text" id="nombre" placeholder="ingresa tu nombre">
+    <hr>
+    <button class="btn" id="hoverBtn">Hover over me</button>
+    <hr>
+    <input type="text" id="typing" placeholder="Type something" />
+    <h3 id="real"> hola mundo</h3>
+    <hr>
+    <script>
+        //-----------------------------------------------
+        // agarra el primero que tiene id en el documento html
+        let element = document.getElementById("title");
+        element.style.color = "orange";
+        //agarra el primero que coincida en el documento de class
+        const coment = document.querySelector(".one");
+        coment.style.color = "yellow";
+        // podemos acceder  en forma de lista los elementos de na clase de css mediante el foreach
+        const liz = document.querySelectorAll(".luz");
+        liz.forEach(function (element) {
+            element.style.color = "orange";
+        });
+        // podemos acceder a los elementos hijos de una etiqueta 
+        let menu = document.getElementById("menu");
+        for (let i = 2; i < menu.children.length; i++) {
+            menu.children[i].style.color = "red";
+        }
+        menu.firstElementChild.style.color = "blue";
+        menu.lastElementChild.style.color = "green";
+        // como manejar elemntos que no existen.
+        //let element = document.getElementById("notExist");
+        //if (element === null) {
+        //    console.log("no exite el elemento.");
+        //} else {
+        //    console.log(element);
+        //}
+        //------------------------------------------
+        // Permite modificar el contedido del texto
+        let title = document.getElementById("title");
+        title.innerText = "BIENVENIDO A MI SNS";
+        //title.style.color = "red";
+        //title.innerText = "titulo modificado!";
+        //------------------------------------------
+        // insertamos html mediante javascript
+        let newtitle = document.getElementById("newtitle");
+        newtitle.innerHTML = "<span style='color:orange;' >Nuevo titulo!</span>";
+        //------------------------------------------
+        // obtiene el valor de un input y tambien lo modifica el valor del imput
+        let input = document.getElementById("username");
+        console.log(input.value);
+        input.value = "Bob";
+        //------------------------------------------
+        // cambia las imagenes de una url
+        let img = document.getElementById("myImage");
+        console.log(img.src);
+        img.src = "imagen1.jpg";
+        //------------------------------------------
+        // ccambiar el link de una etiqueta <a>
+        let link = document.getElementById("myLink");
+        console.log(link.href);
+        link.href = "https://www.wikipedia.org";
+        //------------------------------------------
+        //podemos modificar muchos estilos 
+        let pincel = document.getElementById("estilos");
+        pincel.style.color = "blue";
+        pincel.style.fontSize = "30px";
+        pincel.style.backgroundColor = "yellow";
+        pincel.style.padding = "10px"
+        pincel.style.borderRadius = "10px"
+        //------------------------------------------
+        //
+        const messages = [
+            "BIENVENIDO!",
+            "TEN UN BONITO DIA!",
+            "ME ALEGRA VERTE!",
+            "TU PUEDES CON TODO!",
+        ];
+        const colors = ["blue", "green", "purple", "red"];
+        let index = 0;
+        setInterval(function () {
+            const messageElement = document.getElementById("message");
+            messageElement.innerText = messages[index];
+            messageElement.style.color = colors[index];
+            index++;
+            if (index >= messages.length) {
+                index = 0;
+            }
+        }, 5000);
+        setInterval(function () {
+            const mov = document.getElementById("message");
+            mov.innerText = messages[index];
+            mov.style.color = colors[index];
+            index++;
+            if (index >= messages.length) {
+                index = 0;
+            }
+        }, 5000);
+
+        //------------------------------------------
+        //----------PARTE 2-------------------------
+        //------------------------------------------
+        //funcion para el buton de saludar
+        function saludar() {
+            a = 2 + 3
+            alert("Hello!" + a);
+        }
+        //------------------------------------------
+        // despues de poner nombre sale una  alerta
+        // uso del evento getElementById(etc...)
+        let ingreso = document.getElementById("nombre");
+        ingreso.addEventListener("change", function () {
+            alert("You changed the input!");
+        });
+        //------------------------------------------
+        //cambia las propiedades  de algo cuando pasa sobre un boton
+        let btnmagic = document.getElementById("hoverBtn");
+        btnmagic.addEventListener("mouseover", function () {
+            btnmagic.style.backgroundColor = "yellow";
+            btnmagic.innerText = "el mouse esta aqui!";
+            btnmagic.style.color = "black";
+        });
+        //------------------------------------------
+        //toma las teclas introducidas en el input
+        let typing = document.getElementById("typing");
+        let real = document.getElementById("real");
+        typing.addEventListener("keydown", function (event) {
+            real.innerText = "Contenido del teclado "+ event.key;
+            console.log("You pressed: " + event.key);
+        });
+        //------------------------------------------
+        //
+
+    </script>
+</body>
+
+</html>
