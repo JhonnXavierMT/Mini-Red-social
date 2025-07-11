@@ -17,9 +17,9 @@ hr {
 body {
   font-family: Arial, sans-serif;
   background-color: #2e70b3;
-  color: #333;
   text-align: center; /* corregido */
-  padding: 2rem; /* agregado para más espacio */
+  padding: 0%;
+  margin: 0%;
 }
 
 h1 {
@@ -60,4 +60,15 @@ p {
   margin: 1rem auto;
   font-size: 1.1rem;
   line-height: 1.6;
+}
+/*area del header*/
+.cabecera{
+font-family: Arial, Helvetica, sans-serif;
+display: flex;
+justify-content: center;
+}
+/*area del footer*/
+.piso{
+  padding: 20px;
+  width: 100%;
 }

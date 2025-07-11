@@ -8,27 +8,19 @@
 </head>
 
 <body>
+  <%- include("header") %>
   <h1>✍️ ESCRIBIENDO NUEVO POST</h1>
 
   <!-- Form to submit a new post -->
-  <form action="#" method="post">
-    <label for="writer">nombre:</label><br />
-    <input type="text" id="writer" name="writer" placeholder="Enter your name" required /><br /><br />
-
-    <label for="content">Post:</label><br />
-    <textarea id="content" name="content" rows="5" cols="40" placeholder="What's on your mind?"
-      required></textarea><br /><br />
-
-    <button type="submit">enviar</button>
+  <form action="/write" method="post">
+    <label for="content">Your Post:</label><br />
+    <textarea id="content" name="content" rows="5" cols="40" placeholder="What's on your mind?" required></textarea><br />
+    <button type="submit">Post</button>
   </form>
 
   <br />
   <!-- Link back to home -->
-  <a href="/">
-    <button>
-      ← Regresar
-    </button>
-  </a>
+  <%- include("footer") %>
 </body>
 
 </html>

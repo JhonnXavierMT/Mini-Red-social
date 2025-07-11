@@ -1,5 +1,14 @@
-body{
+body {
   background-color: #2980b9;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-family: Arial, Helvetica, sans-serif; 
 }
 form {
   width: 400px;
@@ -31,4 +40,41 @@ button {
 
 button:hover {
   background-color: #2980b9;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ecf0f1;
+  /* color de fondo para los enlaces */
+  border-radius: 5px;
+  /* bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* animación suave */
+}
+
+a:hover {
+  background-color: #3498db;
+  color: #fff;
+  /* cambia el color de texto al pasar el mouse */
+  text-decoration: none;
+  /* manténlo sin subrayado */
+}
+
+/*area del header*/
+.cabecera {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+}
+
+/*area del footer*/
+.piso {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
