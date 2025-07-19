@@ -171,7 +171,7 @@ app.get("/posts", async (req, res) => {
     }
     try {
         const posts = await Feed.find({
-            author:req.session.username
+            author: req.session.username
         }).sort({
             createdAt: -1,
         }); // sort by createdAt in descending order.
